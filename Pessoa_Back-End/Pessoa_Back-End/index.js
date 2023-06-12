@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/produto', async function(req, res){
+app.get('/produtos', async function(req, res){
   try {
     var produtos = await Produto.select();         
     res.json(produtos.rows);
@@ -21,13 +21,13 @@ app.get('/produto', async function(req, res){
   }
 });
 
-app.post('/pessoas', async function(req, res){
+app.post('/produto', async function(req, res){
   try {
-    var pessoa = await Pessoa.selectOne(req.body.id);
-    res.json(pessoa.rows[0]);
+    var produto = await Produto.selectOne(req.body.id);
+    res.json(produto.rows[0]);
   } catch (error) {
-    console.error('Erro ao buscar pessoas:', error);
-    res.status(500).json({ error: 'Ocorreu um erro ao buscar pessoas' });
+    console.error('Erro ao buscar produto:', error);
+    res.status(500).json({ error: 'Ocorreu um erro ao buscar produto' });
   }
 });
 
