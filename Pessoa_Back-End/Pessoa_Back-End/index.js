@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/produto', async function(req, res){
   try {
-    var produtos = await Produto.select();
+    var produtos = await Produto.select();         
     res.json(produtos.rows);
   } catch (error) {
     console.error('Erro ao buscar o produto:', error);
