@@ -31,24 +31,23 @@ app.post('/produto', async function(req, res){
   }
 });
 
-app.post('/pessoa', async function(req,res){
+app.post('/cadastroproduto', async function(req,res){
   try{
-    var pessoa = req.body
-    var pessoa = await Pessoa.insert(pessoa);
-    res.json(pessoa.rows)
+    var produto = req.body
+    var produto = await Produto.insert(produto);
+    res.json(produto.rows)
   }catch(error){
     console.log("error")
   }
 })
 
-app.delete('/pessoas', async function(req, res){
+app.delete('/produto', async function(req, res){
   try {
-    console.log(req.body.id)
-    var pessoa = await Pessoa.delete(req.body.id);
-    res.json(pessoa.rows);
+    var produto = await Produto.delete(req.body.id);
+    res.json(produto.rows);
   } catch (error) {
-    console.error('Erro ao atualizar pessoa:', error);
-    res.status(500).json({ error: 'Ocorreu um erro ao atualizar pessoa' });
+    console.error('Erro ao deletar produto:', error);
+    res.status(500).json({ error: 'Ocorreu um erro ao deletar produto' });
   }
 });
 

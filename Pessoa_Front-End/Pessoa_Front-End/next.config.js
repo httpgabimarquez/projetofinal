@@ -5,7 +5,7 @@ appDir: true,
 
 },
 images:{
-  domain:['duxnutrition.vtexassets.com']
+  domains:['duxnutrition.vtexassets.com']
 },
 
   

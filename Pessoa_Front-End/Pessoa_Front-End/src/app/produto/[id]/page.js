@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+
 export default async function Produto({ params }) {
     const router = useRouter();
     const id = { id: parseInt(params.id) }
@@ -19,7 +20,7 @@ export default async function Produto({ params }) {
     const remover = () => {
         console.log(idJson)
         try {
-            fetch("http://localhost:3003/pessoas", {
+            fetch("http://localhost:3003/produto", {
                 method: "DELETE",
                 headers: { 'content-type': 'application/json' },
                 body: idJson

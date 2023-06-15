@@ -1,5 +1,6 @@
 "use client"
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default async function Home() {
 
@@ -13,7 +14,9 @@ export default async function Home() {
 
       {produtos.map(produto => (
         <div key={produto.codigo}>
+          
           <p>{produto.titulo}</p>
+          <Image src={produto.img} width={300} height={300}></Image>
           <Link href={`/produto/${produto.codigo}`}>ver mais</Link>
         </div>
       ))}
