@@ -35,7 +35,7 @@ export default function Cadastro() {
         <div className={styles.main}>
           
             <form  onSubmit={cadastrar}>
-                <p>Cadastre um novo produto:</p>
+                <h2>Cadastre um novo produto:</h2>
                 <input
                     type="text"
                     placeholder='Insira o nome do produto:'

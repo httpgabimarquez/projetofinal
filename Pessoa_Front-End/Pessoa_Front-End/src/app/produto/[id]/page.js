@@ -31,11 +31,12 @@ export default async function Produto({ params }) {
             alert("Ocorreu um erro" + error)
         }
     }
+
     return (
         <section id="item1"> 
 
         <p>{produto.titulo}</p>
-        
+       
         <img src={produto.img} width={300} height={300}></img>
    
         <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
