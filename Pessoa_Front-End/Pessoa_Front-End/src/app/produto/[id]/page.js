@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
+
 export default async function Produto({ params }) {
     const router = useRouter();
     const id = { id: parseInt(params.id) }
@@ -31,12 +32,18 @@ export default async function Produto({ params }) {
         }
     }
     return (
-        <div>
-            <p>{produto.titulo}</p>
-            <Image src={produto.img} width={300} height={300}></Image>
-            <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
+        <section id="item1"> 
 
-        </div>
+        <p>{produto.titulo}</p>
+        
+        <img src={produto.img} width={300} height={300}></img>
+   
+        <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
+        
+       <button> <a href='/'>Voltar</a> </button>  </section>
+           
+
+      
 
     )
 }

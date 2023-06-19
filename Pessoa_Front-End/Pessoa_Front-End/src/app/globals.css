@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(130, 112, 147);
+}
+form{
+    background-color: rgb(171, 136, 203);
+    border-radius: 8px;
+    width: 100%;
+    padding: 50px;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.cadastrar{
+    max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+button{
+    background-color: #747a99;
+      color: #d8d1d1;
+      border: none;
+      padding: 20px 70px 20px ;
+      border-radius: 8px;
+      cursor: pointer;
+}
+p{
+    color: rgb(203, 151, 220);
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}
+#item1{
+	display:block;
+   
+}

@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import styles from '../page.module.css'
 import { useRouter } from 'next/navigation'
+import '../globals.css'
 
 export default function Cadastro() {
     const route = useRouter();
@@ -30,7 +31,9 @@ export default function Cadastro() {
     }
 
     return (
+        
         <div className={styles.main}>
+          
             <form  onSubmit={cadastrar}>
                 <input
                     type="text"
@@ -64,9 +67,10 @@ export default function Cadastro() {
                 /><br/>
 
                 <button type='submit'>Cadastrar</button>
-                <div>
-                    <a href='/'>Voltar</a>
-                </div>
+                
+                    <button>   <a href='/'>Voltar</a> </button>
+                 
+                
             </form>
         </div>
     );

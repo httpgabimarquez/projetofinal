@@ -11,13 +11,15 @@ export default async function Home() {
 
   return (
     <main> <Link href="/cadastro" className='voltar'> CADASTRAR </Link>
-
+ 
       {produtos.map(produto => (
         <div key={produto.codigo}>
-          
+          <section id="item1"> 
           <p>{produto.titulo}</p>
-          <Image src={produto.img} width={300} height={300}></Image>
-          <Link href={`/produto/${produto.codigo}`}>ver mais</Link>
+          <img src={produto.img} width={300} height={300}></img>
+
+        <button>  <Link href={`/produto/${produto.codigo}`}>ver mais</Link></button> 
+          </section>
         </div>
       ))}
     </main>
