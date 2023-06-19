@@ -35,10 +35,12 @@ export default async function Produto({ params }) {
     return (
         <section id="item1"> 
 
-        <p>{produto.titulo}</p>
+        <h2>{produto.titulo}</h2>
        
         <img src={produto.img} width={300} height={300}></img>
-   
+        <p> {produto.data_de_cadastro}</p>
+              <p>{produto.preco}</p>
+              <p>{produto.descricao}</p>
         <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
         
        <button> <a href='/'>Voltar</a> </button>  </section>
