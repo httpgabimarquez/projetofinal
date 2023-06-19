@@ -10,8 +10,15 @@ export default async function Home() {
   const produtos = await req.json();
 
   return (
-    <main> <Link href="/cadastro" className='voltar'> CADASTRAR </Link>
- 
+    <main> 
+      <div class="topnav" id="myTopnav">
+
+  <a><Link href="/cadastro" class="active" className='voltar'> Cadastre seu produto </Link></a>
+  <a href="#contact">Contato</a>
+  <a href="#about">Sobre nossa loja</a>
+  </div>
+    
+ <section id="lista">
       {produtos.map(produto => (
         <div key={produto.codigo}>
           <section id="item1"> 
@@ -22,6 +29,7 @@ export default async function Home() {
           </section>
         </div>
       ))}
+      </section>
     </main>
   )
 }

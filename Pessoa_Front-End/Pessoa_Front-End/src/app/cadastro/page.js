@@ -35,33 +35,34 @@ export default function Cadastro() {
         <div className={styles.main}>
           
             <form  onSubmit={cadastrar}>
+                <p>Cadastre um novo produto:</p>
                 <input
                     type="text"
-                    placeholder='titulo:'
+                    placeholder='Insira o nome do produto:'
                     nome="titulo"
                     onChange={e => setTitulo(e.target.value)}
                 /><br/>
                 <input
                     type="Date"
-                    placeholder='Data de cadastro:'
+                    placeholder='Insira a data de cadastro:'
                     nome="data_de_cadastro"
                     onChange={e => setData_de_cadastro(e.target.value)}
                 /><br/>
                 <input
                     type="Float"
-                    placeholder='Preço:'
+                    placeholder='Insira o preço do produto:'
                     nome="preco"
                     onChange={e => setPreco(e.target.value)}
                 /><br/>
                  <input
                     type="text"
-                    placeholder='Descrição'
+                    placeholder='Insira a descrição do produto:'
                     nome="descricao"
                     onChange={e => setDescricao(e.target.value)}
                 /><br/>
                  <input
                     type="text"
-                    placeholder='Imagem do produto'
+                    placeholder='Insira a URL da imagem do produto:'
                     nome="img"
                     onChange={e => setImg(e.target.value)}
                 /><br/>
